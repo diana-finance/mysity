@@ -6,11 +6,11 @@
     <title>Диана | Premium Finance</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-deep: #0a0a0f;
-            --card-glass: rgba(25, 25, 35, 0.65);
+            --card-glass: rgba(25, 25, 35, 0.7);
             --card-border: rgba(255, 255, 255, 0.1);
             --text-main: #ffffff;
             --text-muted: #9ba1b0;
@@ -28,40 +28,32 @@
             line-height: 1.5;
             padding-bottom: 120px;
             overflow-x: hidden;
-            position: relative;
         }
-
-        /* AMBIENT ФОН (МЯГКИЕ СФЕРЫ) */
-        .ambient-orb { position: fixed; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: -1; animation: drift 20s infinite alternate linear; }
-        .orb-1 { width: 300px; height: 300px; background: var(--accent-primary); top: -100px; left: -100px; }
-        .orb-2 { width: 250px; height: 250px; background: var(--accent-secondary); bottom: 100px; right: -50px; animation-delay: -5s; }
-        @keyframes drift { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(50px, 50px) scale(1.2); } }
 
         .container { max-width: 500px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10; }
 
-        h1, h2, h3, .brand-font { font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
 
-        /* U.I. УВЕДОМЛЕНИЯ */
+        /* УВЕДОМЛЕНИЕ */
         #notification-center {
             position: fixed; top: 15px; left: 15px; right: 15px; z-index: 1000;
             display: flex; justify-content: center; pointer-events: none;
         }
         .notify-pill {
-            background: rgba(15, 15, 25, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255,255,255,0.15); border-radius: 20px;
+            background: rgba(15, 15, 25, 0.9); backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 20px;
             padding: 10px 16px; display: flex; align-items: center; gap: 12px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 20px rgba(71, 118, 230, 0.2);
-            transform: translateY(-150%); opacity: 0; transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            transform: translateY(-150%); opacity: 0; transition: all 0.5s ease;
         }
         .notify-pill.show { transform: translateY(0); opacity: 1; }
-        .n-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #38ef7d, #11998e); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 10px rgba(56, 239, 125, 0.3); }
-        .n-icon svg { color: #fff; width: 16px; height: 16px; }
-        .n-text { font-size: 13px; font-weight: 500; color: #e0e0e0; }
-        .n-text strong { color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        .n-icon { width: 30px; height: 30px; background: #38ef7d; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #fff; font-weight: bold; }
+        .n-text { font-size: 13px; color: #e0e0e0; }
+        .n-text strong { color: #fff; }
         .n-text .sum { color: #38ef7d; font-weight: 700; }
 
         /* ШАПКА */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; margin-bottom: 10px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; }
         .profile { display: flex; align-items: center; gap: 14px; }
         .avatar-container { position: relative; padding: 3px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); border-radius: 20px; }
         .avatar {
@@ -73,136 +65,85 @@
         .profile-text h2 { font-size: 18px; font-weight: 700; margin-bottom: 2px; }
         .profile-text p { font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
-        /* ГЕРОЙ-БЛОК */
-        .hero { margin-bottom: 40px; }
-        .hero h1 { font-size: 42px; font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 15px; }
-        .hero h1 span { background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero h1 .gradient { background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { font-size: 16px; color: var(--text-muted); font-weight: 400; line-height: 1.6; }
+        /* ГЕРОЙ */
+        .hero { margin-bottom: 30px; }
+        .hero h1 { font-size: 38px; font-weight: 900; line-height: 1.1; margin-bottom: 15px; }
+        .hero h1 span { background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
 
-        /* СТАТИСТИКА (МЕДЛЕННАЯ И СОЛИДНАЯ) */
+        /* СТАТИСТИКА */
         .stats-bar {
             background: var(--card-glass); border: 1px solid var(--card-border); border-radius: 20px;
-            padding: 18px 24px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center;
-            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            padding: 18px 24px; margin-bottom: 35px; display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(12px);
         }
         .stat-block .label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
-        .dot { width: 6px; height: 6px; background: #38ef7d; border-radius: 50%; animation: blink 3s infinite; }
+        .dot { width: 6px; height: 6px; background: #38ef7d; border-radius: 50%; }
         .stat-block .val { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 800; color: #fff; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-        /* === ШЕДЕВР: ГОЛОГРАФИЧЕСКАЯ VIP КАРТА === */
-        .card-showcase { perspective: 1000px; margin-bottom: 50px; }
+        /* КАРТА */
         .holographic-card {
             background: linear-gradient(135deg, #151515 0%, #050505 100%);
-            border-radius: 24px; padding: 25px; height: 200px; position: relative; overflow: hidden;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,255,255,0.3);
+            border-radius: 24px; padding: 25px; height: 190px; position: relative; overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
             border: 1px solid rgba(255,255,255,0.15);
-            animation: float 6s ease-in-out infinite;
+            margin-bottom: 40px;
         }
-        /* Узор (Текстура карбона/металла) */
-        .holographic-card::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-            background-size: 6px 6px; z-index: 1; opacity: 0.5;
-        }
-        /* Голографический перелив */
-        .holographic-card::after {
-            content: ''; position: absolute; width: 250%; height: 250%; top: -75%; left: -75%;
-            background: conic-gradient(from 180deg at 50% 50%, rgba(71,118,230,0.2), rgba(142,84,233,0.3), rgba(226,185,108,0.2), rgba(71,118,230,0.2));
-            animation: spinGlow 10s linear infinite; z-index: 2; opacity: 0.8; mix-blend-mode: color-dodge;
-        }
-        @keyframes float { 0%, 100% { transform: translateY(0) rotateX(2deg) rotateY(-2deg); } 50% { transform: translateY(-10px) rotateX(-2deg) rotateY(2deg); } }
-        @keyframes spinGlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        
         .hc-content { position: relative; z-index: 10; display: flex; flex-direction: column; height: 100%; justify-content: space-between; }
         .hc-top { display: flex; justify-content: space-between; align-items: flex-start; }
-        .hc-chip { width: 42px; height: 32px; background: linear-gradient(135deg, #e8c678, #b0893a); border-radius: 6px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.4); position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.2); }
-        .hc-chip::after { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(0,0,0,0.2); }
-        .hc-wifi { color: rgba(255,255,255,0.6); }
-        .hc-number { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: 4px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .hc-chip { width: 40px; height: 30px; background: linear-gradient(135deg, #e8c678, #b0893a); border-radius: 6px; }
+        .hc-number { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 4px; color: #fff; }
         .hc-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
-        .hc-name { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.8); }
-        .hc-logo { font-size: 22px; font-weight: 900; font-family: 'Montserrat', sans-serif; font-style: italic; background: linear-gradient(90deg, #fff, #999); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hc-name { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .hc-logo { font-size: 20px; font-weight: 900; font-family: 'Montserrat', sans-serif; color: #fff; }
 
-        /* КАРТОЧКИ УСЛУГ (БОГАТАЯ ДЕТАЛИЗАЦИЯ) */
-        .section-title { font-size: 24px; font-weight: 800; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
-        .section-title::before { content: ''; display: block; width: 6px; height: 24px; background: var(--accent-primary); border-radius: 4px; }
-
+        /* УСЛУГИ */
+        .section-title { font-size: 22px; font-weight: 800; margin-bottom: 20px; }
         .service-card {
-            background: var(--card-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--card-border); border-radius: 24px;
-            padding: 24px; margin-bottom: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            position: relative; overflow: hidden;
+            background: var(--card-glass); border: 1px solid var(--card-border); border-radius: 24px;
+            padding: 24px; margin-bottom: 20px; backdrop-filter: blur(12px);
         }
-        .sc-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
-        .sc-icon {
-            width: 54px; height: 54px; border-radius: 16px;
-            background: linear-gradient(135deg, rgba(71,118,230,0.1), rgba(142,84,233,0.1));
-            border: 1px solid rgba(71,118,230,0.3); display: flex; justify-content: center; align-items: center;
-        }
-        .sc-icon svg { width: 28px; height: 28px; color: #fff; }
-        
-        .sc-price { text-align: right; }
-        .sc-price-val { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: var(--gold); }
-        .sc-price-lbl { font-size: 10px; color: var(--text-muted); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
-
-        .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
-        .service-card p { font-size: 14px; color: #a5acbd; margin-bottom: 20px; line-height: 1.5; }
-        
-        .feature-list { display: flex; flex-direction: column; gap: 12px; }
-        .f-item { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #e0e0e0; }
-        .f-item svg { color: var(--accent-primary); width: 18px; height: 18px; }
+        .sc-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        .sc-price-val { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: var(--gold); text-align: right; }
+        .sc-price-lbl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        .service-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .service-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 15px; }
+        .feature-list { display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #ddd; }
 
         /* ОТЗЫВЫ */
-        .reviews-container { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
         .review-box {
             background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 18px; padding: 20px; position: relative;
+            border-radius: 18px; padding: 18px; margin-bottom: 14px;
         }
-        .review-box::before { content: '"'; position: absolute; top: -5px; right: 15px; font-size: 60px; font-family: serif; color: rgba(255,255,255,0.05); }
-        .r-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .r-name { font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 15px; }
-        .r-stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; }
-        .r-text { font-size: 14px; color: var(--text-muted); line-height: 1.5; font-style: italic; }
+        .r-top { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 6px; font-family: 'Montserrat', sans-serif; }
+        .r-stars { color: var(--gold); font-size: 12px; }
+        .r-text { font-size: 13px; color: var(--text-muted); font-style: italic; }
 
-        /* КНОПКА СВЯЗИ (ПЛАВАЮЩАЯ) */
+        /* КНОПКА */
         .action-dock {
             position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
-            background: linear-gradient(to top, rgba(10,10,15,1) 30%, rgba(10,10,15,0));
-            padding: 20px 20px 35px; display: flex; justify-content: center; pointer-events: none;
+            background: linear-gradient(to top, rgba(10,10,15,1) 40%, rgba(10,10,15,0));
+            padding: 20px 20px 30px; display: flex; justify-content: center;
         }
         .btn-premium {
-            pointer-events: auto; width: 100%; max-width: 460px;
+            width: 100%; max-width: 460px;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: #fff; text-decoration: none; display: flex; justify-content: center; align-items: center; gap: 10px;
-            padding: 20px; border-radius: 20px; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800;
-            box-shadow: 0 10px 30px rgba(71, 118, 230, 0.4), inset 0 2px 2px rgba(255,255,255,0.2);
-            transition: transform 0.2s; border: 1px solid rgba(255,255,255,0.1);
+            padding: 18px; border-radius: 18px; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800;
+            box-shadow: 0 10px 25px rgba(71, 118, 230, 0.4); border: 1px solid rgba(255,255,255,0.2);
         }
-        .btn-premium:active { transform: scale(0.97); }
-
     </style>
 </head>
 <body>
 
-<!-- АМБИЕНТ ФОН -->
-<div class="ambient-orb orb-1"></div>
-<div class="ambient-orb orb-2"></div>
-
-<!-- УВЕДОМЛЕНИЯ -->
 <div id="notification-center">
     <div class="notify-pill" id="live-toast">
-        <div class="n-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-        </div>
-        <div class="n-text" id="toast-msg"><strong>Мария</strong> только что получила <span class="sum">1 500 ₽</span></div>
+        <div class="n-icon">✓</div>
+        <div class="n-text" id="toast-msg"><strong>Мария</strong> получила <span class="sum">1 500 ₽</span></div>
     </div>
 </div>
 
 <div class="container">
-    
-    <!-- ШАПКА -->
     <header>
         <div class="profile">
             <div class="avatar-container">
@@ -214,157 +155,119 @@
                 <p>Финансовый эксперт</p>
             </div>
         </div>
-        <svg width="24" height="24" fill="none" stroke="rgba(255,255,255,0.4)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
     </header>
 
-    <!-- ГЕРОЙ -->
     <div class="hero">
-        <h1>Ваш пропуск<br>к <span>скрытым</span><br><span class="gradient">бонусам.</span></h1>
-        <p>Я официально работаю с топ-банками. Подбираю продукты под вас, оформляю без ошибок и выплачиваю часть своей комиссии вам на карту.</p>
+        <h1>Ваш пропуск к <span>скрытым бонусам</span></h1>
+        <p>Официально работаю с топ-банками. Помогаю оформить продукты и возвращаю часть комиссии вам на карту.</p>
     </div>
 
-    <!-- СТАТИСТИКА -->
     <div class="stats-bar">
         <div class="stat-block">
-            <div class="label"><div class="dot"></div>Выплачено бонусов</div>
-            <div class="val" id="money-counter">314 500 ₽</div>
+            <div class="label"><div class="dot"></div>Выплачено бонусов за месяц</div>
+            <div class="val" id="money-counter">12 500 ₽</div>
         </div>
-        <svg width="32" height="32" fill="none" stroke="rgba(255,255,255,0.2)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
     </div>
 
-    <!-- ГОЛОГРАФИЧЕСКАЯ КАРТА -->
-    <div class="card-showcase">
-        <div class="holographic-card">
-            <div class="hc-content">
-                <div class="hc-top">
-                    <div class="hc-chip"></div>
-                    <svg class="hc-wifi" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </div>
-                <div class="hc-number">•••• •••• •••• 7700</div>
-                <div class="hc-bottom">
-                    <div class="hc-name">Premium Consult</div>
-                    <div class="hc-logo">DIANA</div>
-                </div>
+    <div class="holographic-card">
+        <div class="hc-content">
+            <div class="hc-top">
+                <div class="hc-chip"></div>
+            </div>
+            <div class="hc-number">•••• •••• •••• 7700</div>
+            <div class="hc-bottom">
+                <div class="hc-name">Premium Consult</div>
+                <div class="hc-logo">DIANA</div>
             </div>
         </div>
     </div>
 
-    <!-- УСЛУГИ -->
     <h2 class="section-title">Программы</h2>
 
     <div class="service-card">
         <div class="sc-header">
-            <div class="sc-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg></div>
+            <h3>Дебетовые карты</h3>
             <div class="sc-price">
                 <div class="sc-price-val">до 3 000 ₽</div>
-                <div class="sc-price-lbl">Разовая выплата</div>
+                <div class="sc-price-lbl">Выплата</div>
             </div>
         </div>
-        <h3>Дебетовые карты</h3>
-        <p>Подберу пластик, на котором вы будете зарабатывать. Максимальный кэшбэк и 0₽ за обслуживание.</p>
+        <p>Подберу карту с максимальным кэшбэком и бесплатным обслуживанием.</p>
         <div class="feature-list">
-            <div class="f-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Быстрое одобрение</div>
-            <div class="f-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Деньги после получения карты</div>
+            <div>✓ Быстрое оформление онлайн</div>
+            <div>✓ Бонус сразу после получения</div>
         </div>
     </div>
 
     <div class="service-card">
         <div class="sc-header">
-            <div class="sc-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+            <h3>Регистрация ИП и РКО</h3>
             <div class="sc-price">
                 <div class="sc-price-val">до 15 000 ₽</div>
                 <div class="sc-price-lbl">Для бизнеса</div>
             </div>
         </div>
-        <h3>Регистрация ИП и РКО</h3>
-        <p>Легальное открытие бизнеса онлайн. Лучшие тарифы расчетных счетов для ваших задач.</p>
+        <p>Открытие бизнеса и расчетного счета без визита в налоговую.</p>
         <div class="feature-list">
-            <div class="f-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Без визита в ФНС</div>
-            <div class="f-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Полное сопровождение</div>
+            <div>✓ Лучшие тарифы банков</div>
+            <div>✓ Полное сопровождение</div>
         </div>
     </div>
 
     <div class="service-card">
         <div class="sc-header">
-            <div class="sc-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg></div>
+            <h3>Оплачиваемые отзывы</h3>
             <div class="sc-price">
                 <div class="sc-price-val">до 2 000 ₽</div>
-                <div class="sc-price-lbl">Партнерство</div>
+                <div class="sc-price-lbl">Задание</div>
             </div>
         </div>
-        <h3>Оплачиваемые отзывы</h3>
-        <p>Делитесь честным мнением о сервисе банков и получайте за это деньги на карту. Тратьте 30-40 минут в день.</p>
+        <p>Делитесь мнением о банках. Уделяйте всего 30-40 минут в день.</p>
         <div class="feature-list">
-            <div class="f-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Свободный график</div>
-            <div class="f-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> Стабильный доход</div>
+            <div>✓ Свободный график</div>
+            <div>✓ Стабильные выплаты</div>
         </div>
     </div>
 
-    <!-- ОТЗЫВЫ -->
     <h2 class="section-title">Отзывы</h2>
-    <div class="reviews-container">
-        <div class="review-box">
-            <div class="r-top">
-                <div class="r-name">Анастасия</div>
-                <div class="r-stars">★★★★★</div>
-            </div>
-            <div class="r-text">Самая лучшая @mngdianaa ))) честно, понятно, быстро и главное — хорошо оплачиваемо.</div>
-        </div>
-        <div class="review-box">
-            <div class="r-top">
-                <div class="r-name">Алина</div>
-                <div class="r-stars">★★★★★</div>
-            </div>
-            <div class="r-text">Спасибочки 🙌 выплату за отзывы по Альфе и за оформление получила, буду обращаться еще.</div>
-        </div>
+    <div class="review-box">
+        <div class="r-top"><span>Анастасия</span><span class="r-stars">★★★★★</span></div>
+        <div class="r-text">"Самая лучшая @mngdianaa ))) честно, понятно, быстро и главное — хорошо оплачиваемо."</div>
     </div>
-
+    <div class="review-box">
+        <div class="r-top"><span>Алина</span><span class="r-stars">★★★★★</span></div>
+        <div class="r-text">"Спасибочки 🙌 выплату за отзывы по Альфе и за оформление получила, буду обращаться еще."</div>
+    </div>
 </div>
 
-<!-- ФИКСИРОВАННАЯ КНОПКА -->
 <div class="action-dock">
-    <a href="https://t.me/mngdianaa" class="btn-premium">
-        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-        Написать в Telegram
-    </a>
+    <a href="https://t.me/mngdianaa" class="btn-premium">Написать в Telegram</a>
 </div>
 
 <script>
-    // 1. Медленный и солидный счетчик (создает доверие)
-    const counterElement = document.getElementById('money-counter');
-    let currentVal = 314500;
-    
-    // Обновляется редко (раз в 1-2 минуты), имитируя 2-5 клиентов в день
+    // Плавный реалистичный счетчик с 12 500 ₽
+    const counter = document.getElementById('money-counter');
+    let val = 12500;
     setInterval(() => {
-        const add = Math.floor(Math.random() * (1500 - 500 + 1)) + 500;
-        currentVal += add;
-        counterElement.innerHTML = currentVal.toLocaleString('ru-RU') + ' ₽';
-    }, 90000); // 90 секунд
+        val += Math.floor(Math.random() * 500) + 200;
+        counter.innerHTML = val.toLocaleString('ru-RU') + ' ₽';
+    }, 70000);
 
-    // 2. Редкие уведомления
-    const names = ['Алина', 'Егор', 'Маша', 'Анна', 'Денис'];
-    const actions = ['за отзыв', 'за оформление', 'за регистрацию'];
-    const amounts = ['1 500 ₽', '3 000 ₽', '1 000 ₽'];
-    
+    // Уведомления
     const toast = document.getElementById('live-toast');
-    const toastMsg = document.getElementById('toast-msg');
+    const msg = document.getElementById('toast-msg');
+    const names = ['Маша', 'Егор', 'Алина', 'Руслан', 'Анна'];
     
     function showToast() {
         const name = names[Math.floor(Math.random() * names.length)];
-        const amount = amounts[Math.floor(Math.random() * amounts.length)];
-        const action = actions[Math.floor(Math.random() * actions.length)];
-        
-        toastMsg.innerHTML = `<strong>${name}</strong> получил(а) <span class="sum">${amount}</span> ${action}`;
-        
+        msg.innerHTML = `<strong>${name}</strong> получила <span class="sum">1 500 ₽</span>`;
         toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 4500);
+        setTimeout(() => toast.classList.remove('show'), 4000);
     }
-
-    // Первое уведомление через 5 секунд, затем раз в 1-2 минуты
+    
     setTimeout(() => {
-        showToast();
-        setInterval(showToast, Math.floor(Math.random() * (120000 - 60000 + 1) + 60000));
-    }, 5000);
+        setInterval(showToast, 50000);
+    }, 4000);
 </script>
 
 </body>
