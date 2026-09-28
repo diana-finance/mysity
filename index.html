@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диана | Консультант по банковским продуктам</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background: #f4f7f6; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #ddd; margin-bottom: 30px; }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .avatar { width: 50px; height: 50px; background: #2AABEE; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; }
+        .name-title h2 { margin: 0; font-size: 18px; }
+        .name-title p { margin: 0; font-size: 12px; color: #777; }
+        .btn-header { background: #2AABEE; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 14px; }
+        
+        .hero { background: white; padding: 40px 30px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 32px; margin-bottom: 15px; }
+        .hero h1 em { font-style: normal; color: #2AABEE; }
+        .hero p { font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 25px; }
+        .btn-main { display: inline-block; background: #2AABEE; color: white; text-decoration: none; padding: 15px 30px; border-radius: 12px; font-weight: bold; font-size: 16px; }
+        
+        section { margin-bottom: 50px; }
+        h2.section-title { font-size: 24px; margin-bottom: 20px; }
+        
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media(min-width: 600px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+        .service-card { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .price-tag { background: #e6f5fc; color: #2AABEE; padding: 5px 12px; border-radius: 20px; font-size: 14px; font-weight: bold; display: inline-block; margin-bottom: 15px; }
+        .service-card h3 { margin: 0 0 10px; font-size: 18px; }
+        .service-card p { font-size: 14px; color: #666; margin-bottom: 15px; }
+        .service-card ul { padding-left: 20px; font-size: 14px; color: #555; }
+        
+        .steps { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .step { display: flex; gap: 15px; margin-bottom: 20px; }
+        .step:last-child { margin-bottom: 0; }
+        .step-num { font-size: 24px; font-weight: bold; color: #2AABEE; }
+        .step-text h3 { margin: 0 0 5px; font-size: 16px; }
+        .step-text p { margin: 0; font-size: 14px; color: #666; }
+
+        .reviews { display: flex; flex-direction: column; gap: 20px; }
+        .review-card { background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .review-header { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: bold; }
+        .stars { color: #FFD700; }
+        .review-card p { margin: 0; font-size: 14px; color: #555; line-height: 1.5; }
+
+        .partners { display: flex; flex-wrap: wrap; gap: 10px; }
+        .partner-tag { background: white; padding: 10px 15px; border-radius: 8px; font-size: 14px; color: #555; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        
+        footer { text-align: center; padding: 20px; color: #888; font-size: 12px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-area">
+            <div class="avatar">Д</div>
+            <div class="name-title">
+                <h2>Диана</h2>
+                <p>Консультант по банковским продуктам</p>
+            </div>
+        </div>
+        <a href="https://t.me/mngdianaa" class="btn-header">Связаться</a>
+    </header>
+
+    <div class="hero">
+        <p style="font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px;">Официальный партнёр 12 банков</p>
+        <h1>Ваш личный <em>консультант</em> по банковским продуктам</h1>
+        <p>Меня зовут Диана. Помогаю подобрать и оформить банковские продукты, консультирую по финансовым решениям и сопровождаю клиентов на всех этапах — от заявки до подключения.</p>
+        <a href="https://t.me/mngdianaa" class="btn-main">Написать в Telegram</a>
+    </div>
+
+    <section id="services">
+        <h2 class="section-title">Услуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="price-tag">1 000–3 000 ₽ Оплата</div>
+                <h3>Дебетовые карты</h3>
+                <p>Подберу и помогу оформить карту с выгодными условиями.</p>
+                <ul>
+                    <li>Подбор подходящей карты</li>
+                    <li>Консультация по условиям</li>
+                    <li>Помощь с оформлением</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="price-tag">5 000–15 000 ₽ Оплата</div>
+                <h3>Регистрация ИП</h3>
+                <p>Помогу открыть ИП правильно и без ошибок в документах.</p>
+                <ul>
+                    <li>Консультация по регистрации</li>
+                    <li>Сопровождение процесса</li>
+                    <li>Ответы на все вопросы</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="price-tag">4 000–9 500 ₽ Оплата</div>
+                <h3>Расчётный счёт (РКО)</h3>
+                <p>Открою расчётный счёт для ИП или бизнеса и помогу с оформлением.</p>
+                <ul>
+                    <li>Подбор тарифа для бизнеса</li>
+                    <li>Помощь с открытием счёта</li>
+                    <li>Сопровождение до подключения</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="price-tag">500–2 000 ₽ Оплата</div>
+                <h3>Оплата за отзывы</h3>
+                <p>Вознаграждение за участие в исследованиях качества сервиса. Сбор обратной связи о банковских продуктах.</p>
+                <ul>
+                    <li>Оплата за честный отзыв</li>
+                    <li>Участие в опросах банков</li>
+                    <li>Простое участие без визитов</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Как проходит консультация</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">01</div>
+                <div class="step-text">
+                    <h3>Пишете мне в Telegram</h3>
+                    <p>Коротко описываете свою задачу.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <div class="step-text">
+                    <h3>Уточняющие вопросы</h3>
+                    <p>Задаю вопросы и предлагаю подходящее решение.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <div class="step-text">
+                    <h3>Онлайн, в любое время</h3>
+                    <p>Консультация проходит удалённо и ни к чему не обязывает.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Партнёры</h2>
+        <p style="color: #666; margin-top: -10px; margin-bottom: 15px;">Работаю напрямую с банками — без посредников и переплат.</p>
+        <div class="partners">
+            <span class="partner-tag">Альфа-Банк</span>
+            <span class="partner-tag">Т-Банк</span>
+            <span class="partner-tag">Сбербанк</span>
+            <span class="partner-tag">ВТБ</span>
+            <span class="partner-tag">Совкомбанк</span>
+            <span class="partner-tag">Газпромбанк</span>
+            <span class="partner-tag">Райффайзен Банк</span>
+            <span class="partner-tag">Открытие</span>
+            <span class="partner-tag">Росбанк</span>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Отзывы</h2>
+        <div class="reviews">
+            <div class="review-card">
+                <div class="review-header">
+                    <span>Алина</span>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <p>Спасибочки @mngdianaa 🙌 выплату за отзывы по Альфе и за оформление получила, в ближайшие дни ещё отзывы напишу.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <span>Маша</span>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <p>Самая лучшая @mngdianaa ))) честно, понятно, быстро и главное — хорошо оплачиваемо.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <span>Настя</span>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <p>Занималась написанием отзывов с Дианой и вот пишу отзыв о нашей работе — всё круто, классно) Кто сомневается, понимаю вас хахах, сама засомневалась сначала, но всё хорошо 🫶</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="text-align: center; margin-top: 60px;">
+        <h2>Остались вопросы?</h2>
+        <p style="color: #666; margin-bottom: 20px;">Напишите — отвечу лично и подберу решение под вашу ситуацию.</p>
+        <a href="https://t.me/mngdianaa" class="btn-main">Написать в Telegram</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Диана · Консультант по банковским продуктам</p>
+    </footer>
+</div>
+
+</body>
+</html>
