@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Диана | Консультант по банковским продуктам</title>
+    <title>Диана — консультант по банковским продуктам</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,11 +24,11 @@
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             line-height: 1.5;
-            padding-bottom: 50px;
+            padding-bottom: 40px;
             overflow-x: hidden;
         }
 
-        .container { max-width: 480px; margin: 0 auto; padding: 0 16px; }
+        .container { max-width: 440px; margin: 0 auto; padding: 0 16px; }
 
         /* HEADER */
         header {
@@ -37,28 +37,29 @@
         }
         .user-profile {
             background: var(--card-bg); border: 1px solid var(--card-border);
-            border-radius: 100px; padding: 6px 16px 6px 6px;
-            display: flex; align-items: center; gap: 12px;
+            border-radius: 100px; padding: 6px 14px 6px 6px;
+            display: flex; align-items: center; gap: 10px;
         }
         .avatar {
-            width: 44px; height: 44px; border-radius: 50%;
+            width: 40px; height: 40px; border-radius: 50%;
             background: linear-gradient(135deg, #3a2e5c, #6c5ce7);
             display: flex; justify-content: center; align-items: center;
-            font-weight: 700; font-size: 16px; color: #fff;
-            box-shadow: 0 0 15px rgba(108, 92, 231, 0.4);
+            font-weight: 700; font-size: 15px; color: #fff;
+            box-shadow: 0 0 12px rgba(108, 92, 231, 0.4);
         }
-        .user-info h3 { font-size: 14px; font-weight: 600; color: #fff; line-height: 1.2; }
-        .user-info p { font-size: 11px; color: var(--text-muted); line-height: 1.2; }
+        .user-info h3 { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.2; }
+        .user-info p { font-size: 10px; color: var(--text-muted); line-height: 1.2; }
         
+        .header-actions { display: flex; align-items: center; gap: 8px; }
         .btn-contact-top {
             background: #fff; color: #000; text-decoration: none;
-            font-size: 14px; font-weight: 600; padding: 12px 20px;
-            border-radius: 100px; display: flex; align-items: center; gap: 8px;
+            font-size: 13px; font-weight: 600; padding: 10px 16px;
+            border-radius: 100px; display: flex; align-items: center; gap: 6px;
         }
         .btn-menu {
             background: var(--card-bg); border: 1px solid var(--card-border);
-            width: 46px; height: 46px; border-radius: 50%;
-            display: flex; justify-content: center; align-items: center; cursor: pointer; color: #fff;
+            width: 40px; height: 40px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center; color: #fff;
         }
 
         /* BADGE */
@@ -71,7 +72,7 @@
         .dot { width: 6px; height: 6px; background: #32d74b; border-radius: 50%; box-shadow: 0 0 8px #32d74b; }
 
         /* HERO */
-        h1 { font-size: 34px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.5px; }
+        h1 { font-size: 32px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.5px; }
         h1 span {
             background: var(--accent-gradient);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -92,29 +93,29 @@
             width: 100%; margin-bottom: 30px;
         }
 
-        /* BANK CARD */
+        /* BANK CARD (ИДЕАЛЬНАЯ КОПИЯ) */
         .bank-card {
-            background: linear-gradient(135deg, #3d1519 0%, #120a0b 100%);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px; padding: 24px; height: 180px;
-            position: relative; overflow: hidden; margin-bottom: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            background: linear-gradient(135deg, #2a1518 0%, #100809 100%);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px; padding: 22px; height: 170px;
+            position: relative; overflow: hidden; margin-bottom: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
-        .card-chip { width: 38px; height: 28px; background: rgba(255,255,255,0.15); border-radius: 5px; margin-bottom: 35px; }
+        .card-chip { width: 36px; height: 26px; background: rgba(255,255,255,0.12); border-radius: 5px; margin-bottom: 30px; }
         .card-number { font-size: 18px; letter-spacing: 4px; font-family: monospace; color: rgba(255,255,255,0.7); }
-        .card-bottom { display: flex; justify-content: space-between; align-items: flex-end; position: absolute; bottom: 20px; left: 24px; right: 24px; }
+        .card-bottom { display: flex; justify-content: space-between; align-items: flex-end; position: absolute; bottom: 20px; left: 22px; right: 22px; }
         .card-logo { font-size: 22px; font-weight: 800; color: #fff; }
         .card-name { font-size: 10px; letter-spacing: 1px; color: rgba(255,255,255,0.5); text-transform: uppercase; }
 
         /* SECTIONS */
-        .section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; margin-top: 40px; }
+        .section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; margin-top: 35px; }
         
         .card {
             background: var(--card-bg); border: 1px solid var(--card-border);
-            border-radius: 24px; padding: 24px; margin-bottom: 16px;
+            border-radius: 24px; padding: 22px; margin-bottom: 16px;
         }
 
-        /* FEATURES / INDIVIDUAL */
+        /* INDIVIDUAL */
         .feature-row { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
         .feature-row:last-child { margin-bottom: 0; }
         .f-icon-wrap {
@@ -123,30 +124,30 @@
             display: flex; justify-content: center; align-items: center; color: #fff;
         }
         .f-text h4 { font-size: 15px; margin-bottom: 2px; font-weight: 600; }
-        .f-text p { font-size: 13px; color: var(--text-muted); }
+        .f-text p { font-size: 13px; color: var(--text-muted); line-height: 1.4; }
 
         /* SERVICES */
         .service-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
         .service-icon-box {
-            width: 46px; height: 46px; background: #1a1a1e; border: 1px solid var(--card-border);
-            border-radius: 14px; display: flex; justify-content: center; align-items: center; color: #fff;
+            width: 44px; height: 44px; background: #1a1a1e; border: 1px solid var(--card-border);
+            border-radius: 12px; display: flex; justify-content: center; align-items: center; color: #fff;
         }
         .service-price { text-align: right; }
-        .service-price span { display: block; font-size: 18px; font-weight: 700; color: #fff; }
-        .service-price small { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        .service-price span { display: block; font-size: 16px; font-weight: 700; color: #fff; }
+        .service-price small { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
         
-        .card h3 { font-size: 20px; margin-bottom: 8px; font-weight: 700; }
-        .card > p { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
+        .card h3 { font-size: 18px; margin-bottom: 6px; font-weight: 700; }
+        .card > p { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.4; }
         
         .check-list { list-style: none; }
         .check-list li {
             display: flex; align-items: flex-start; gap: 10px;
-            font-size: 13px; color: #bbb; margin-bottom: 12px;
+            font-size: 13px; color: #bbb; margin-bottom: 10px;
         }
-        .check-list li svg { width: 16px; height: 16px; color: #78a2ff; flex-shrink: 0; margin-top: 2px; }
+        .check-list li svg { width: 16px; height: 16px; color: #a395ff; flex-shrink: 0; margin-top: 2px; }
 
         /* HOW IT WORKS */
-        .step-item { display: flex; gap: 16px; margin-bottom: 20px; }
+        .step-item { display: flex; gap: 16px; margin-bottom: 18px; }
         .step-item:last-child { margin-bottom: 0; }
         .step-num { font-size: 14px; font-weight: 700; color: #a395ff; font-family: monospace; }
         .step-content h4 { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
@@ -162,17 +163,17 @@
         /* REVIEWS */
         .review-card h4 { font-size: 15px; margin-bottom: 6px; display: flex; justify-content: space-between; }
         .stars { color: #a395ff; font-size: 12px; letter-spacing: 2px; }
-        .review-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+        .review-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
         /* FOOTER CONTACT */
-        .contact-box { text-align: center; padding: 40px 20px; }
+        .contact-box { text-align: center; padding: 35px 20px; }
         .contact-box .icon-wrap {
-            width: 48px; height: 48px; background: #1a1a1e; border: 1px solid var(--card-border);
+            width: 44px; height: 44px; background: #1a1a1e; border: 1px solid var(--card-border);
             border-radius: 50%; display: flex; justify-content: center; align-items: center;
             margin: 0 auto 16px; color: #fff;
         }
-        .contact-box h2 { font-size: 22px; margin-bottom: 8px; font-weight: 700; }
-        .contact-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+        .contact-box h2 { font-size: 20px; margin-bottom: 6px; font-weight: 700; }
+        .contact-box p { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
 
         footer { text-align: center; color: #555; font-size: 12px; margin-top: 30px; }
     </style>
@@ -187,33 +188,35 @@
             <div class="avatar">Д</div>
             <div class="user-info">
                 <h3>Диана</h3>
-                <p>Консультант по банкам</p>
+                <p>Консультант по банкам[span_5](start_span)[span_5](end_span)</p>
             </div>
         </div>
-        <a href="https://t.me/mngdianaa" class="btn-contact-top">
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-            Связаться
-        </a>
-        <div class="btn-menu">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <div class="header-actions">
+            <a href="https://t.me/mngdianaa" class="btn-contact-top">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                Связаться[span_6](start_span)[span_6](end_span)
+            </a>
+            <div class="btn-menu">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </div>
         </div>
     </header>
 
     <!-- HERO -->
-    <div class="badge"><div class="dot"></div> Официальный партнёр 12 банков</div>
-    <h1>Ваш личный <span>консультант</span> по банковским продуктам</h1>
-    <p class="hero-desc">Меня зовут Диана. Помогаю подобрать и оформить банковские продукты, консультирую по финансовым решениям и сопровождаю клиентов на всех этапах — от заявки до подключения.</p>
+    <div class="badge"><div class="dot"></div> Официальный партнёр 12 банков[span_7](start_span)[span_7](end_span)</div>
+    <h1>Ваш личный <span>консультант</span> по банковским продуктам[span_8](start_span)[span_8](end_span)</h1>
+    <p class="hero-desc">Меня зовут Диана. Помогаю подобрать и оформить банковские продукты, консультирую по финансовым решениям и сопровождаю клиентов на всех этапах — от заявки до подключения[span_9](start_span)[span_9](end_span).</p>
     
     <a href="https://t.me/mngdianaa" class="btn-main">
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-        Связаться со мной
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+        Связаться со мной[span_10](start_span)[span_10](end_span)
     </a>
-    <a href="#services" class="btn-secondary">Смотреть услуги</a>
+    <a href="#services" class="btn-secondary">Смотреть услуги[span_11](start_span)[span_11](end_span)</a>
 
-    <!-- CARD VISUAL -->
+    <!-- BANK CARD -->
     <div class="bank-card">
         <div class="card-chip"></div>
-        <div class="card-number">•••• •••• •••• 07</div>
+        <div class="card-number">•••• •••• •••• 07[span_12](start_span)[span_12](end_span)</div>
         <div class="card-bottom">
             <div class="card-logo">Д</div>
             <div class="card-name">Diana Mironova</div>
@@ -222,164 +225,164 @@
 
     <!-- INDIVIDUAL APPROACH -->
     <div class="card">
-        <h2 style="font-size: 22px; margin-bottom: 14px; font-weight: 700;">Индивидуальный подход к каждому</h2>
-        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.5;">Помогаю выбрать оптимальные банковские продукты и оформить их без лишних сложностей. Разбираюсь в условиях, тарифах и нюансах — и подсказываю решение под вашу задачу.</p>
+        <h2 style="font-size: 20px; margin-bottom: 12px; font-weight: 700;">Индивидуальный подход к каждому[span_13](start_span)[span_13](end_span)</h2>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5;">Помогаю выбрать оптимальные банковские продукты и оформить их без лишних сложностей. Разбираюсь в условиях, тарифах и нюансах — и подсказываю решение под вашу задачу[span_14](start_span)[span_14](end_span).</p>
         
         <div class="feature-row">
-            <div class="f-icon-wrap"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
+            <div class="f-icon-wrap"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
             <div class="f-text">
-                <h4>Опыт в финансовой сфере</h4>
-                <p>Практика работы с банковскими продуктами и клиентами.</p>
+                <h4>Опыт в финансовой сфере[span_15](start_span)[span_15](end_span)</h4>
+                <p>Практика работы с банковскими продуктами и клиентами[span_16](start_span)[span_16](end_span).</p>
             </div>
         </div>
         <div class="feature-row">
-            <div class="f-icon-wrap"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg></div>
+            <div class="f-icon-wrap"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg></div>
             <div class="f-text">
-                <h4>Помощь в выборе продуктов</h4>
-                <p>Подбираю карту, тариф или счёт под вашу задачу.</p>
+                <h4>Помощь в выборе продуктов[span_17](start_span)[span_17](end_span)</h4>
+                <p>Подбираю карту, тариф или счёт под вашу задачу[span_18](start_span)[span_18](end_span).</p>
             </div>
         </div>
         <div class="feature-row">
-            <div class="f-icon-wrap"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+            <div class="f-icon-wrap"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
             <div class="f-text">
-                <h4>Прозрачные условия</h4>
-                <p>Никаких скрытых комиссий — все нюансы объясняю заранее.</p>
+                <h4>Прозрачные условия[span_19](start_span)[span_19](end_span)</h4>
+                <p>Никаких скрытых комиссий — все нюансы объясняю заранее[span_20](start_span)[span_20](end_span).</p>
             </div>
         </div>
         <div class="feature-row">
-            <div class="f-icon-wrap"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+            <div class="f-icon-wrap"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
             <div class="f-text">
-                <h4>Сопровождение до результата</h4>
-                <p>Остаюсь на связи, пока продукт не будет оформлен.</p>
+                <h4>Сопровождение до результата[span_21](start_span)[span_21](end_span)</h4>
+                <p>Остаюсь на связи, пока продукт не будет оформлен[span_22](start_span)[span_22](end_span).</p>
             </div>
         </div>
     </div>
 
     <!-- SERVICES -->
-    <h2 class="section-title" id="services">Услуги</h2>
+    <h2 class="section-title" id="services">Услуги[span_23](start_span)[span_23](end_span)</h2>
     
     <div class="card">
         <div class="service-top">
-            <div class="service-icon-box"><svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg></div>
-            <div class="service-price"><span>1 000–3 000 ₽</span><small>Оплата</small></div>
+            <div class="service-icon-box"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg></div>
+            <div class="service-price"><span>1 000–3 000 ₽</span><small>Оплата[span_24](start_span)[span_24](end_span)</small></div>
         </div>
-        <h3>Дебетовые карты</h3>
-        <p>Подберу и помогу оформить карту с выгодными условиями.</p>
+        <h3>Дебетовые карты[span_25](start_span)[span_25](end_span)</h3>
+        <p>Подберу и помогу оформить карту с выгодными условиями[span_26](start_span)[span_26](end_span).</p>
         <ul class="check-list">
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Подбор подходящей карты</li>
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Консультация по условиям</li>
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Помощь с оформлением</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Подбор подходящей карты[span_27](start_span)[span_27](end_span)</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Консультация по условиям[span_28](start_span)[span_28](end_span)</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Помощь с оформлением[span_29](start_span)[span_29](end_span)</li>
         </ul>
     </div>
 
     <div class="card">
         <div class="service-top">
-            <div class="service-icon-box"><svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
-            <div class="service-price"><span>5 000–15 000 ₽</span><small>Оплата</small></div>
+            <div class="service-icon-box"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+            <div class="service-price"><span>5 000–15 000 ₽</span><small>Оплата[span_30](start_span)[span_30](end_span)</small></div>
         </div>
-        <h3>Регистрация ИП</h3>
-        <p>Помогу открыть ИП правильно и без ошибок в документах.</p>
+        <h3>Регистрация ИП[span_31](start_span)[span_31](end_span)</h3>
+        <p>Помогу открыть ИП правильно и без ошибок в документах[span_32](start_span)[span_32](end_span).</p>
         <ul class="check-list">
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Консультация по регистрации</li>
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Сопровождение процесса</li>
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Ответы на все вопросы</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Консультация по регистрации[span_33](start_span)[span_33](end_span)</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Сопровождение процесса[span_34](start_span)[span_34](end_span)</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Ответы на все вопросы[span_35](start_span)[span_35](end_span)</li>
         </ul>
     </div>
 
     <div class="card">
         <div class="service-top">
-            <div class="service-icon-box"><svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>
-            <div class="service-price"><span>4 000–9 500 ₽</span><small>Оплата</small></div>
+            <div class="service-icon-box"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>
+            <div class="service-price"><span>4 000–9 500 ₽</span><small>Оплата[span_36](start_span)[span_36](end_span)</small></div>
         </div>
-        <h3>Расчётный счёт (РКО)</h3>
-        <p>Открою расчётный счёт для ИП или бизнеса и помогу с оформлением.</p>
+        <h3>Расчётный счёт (РКО)[span_37](start_span)[span_37](end_span)</h3>
+        <p>Открою расчётный счёт для ИП или бизнеса и помогу с оформлением[span_38](start_span)[span_38](end_span).</p>
         <ul class="check-list">
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Подбор тарифа для бизнеса</li>
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Помощь с открытием счёта</li>
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Сопровождение до подключения</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Подбор тарифа для бизнеса[span_39](start_span)[span_39](end_span)</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Помощь с открытием счёта[span_40](start_span)[span_40](end_span)</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Сопровождение до подключения[span_41](start_span)[span_41](end_span)</li>
         </ul>
     </div>
 
     <div class="card">
         <div class="service-top">
-            <div class="service-icon-box"><svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
-            <div class="service-price"><span>500–2 000 ₽</span><small>Оплата</small></div>
+            <div class="service-icon-box"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
+            <div class="service-price"><span>500–2 000 ₽</span><small>Оплата[span_42](start_span)[span_42](end_span)</small></div>
         </div>
-        <h3>Оплата за отзывы и исследования</h3>
-        <p>Вознаграждение за участие в исследованиях качества сервиса. Сбор обратной связи о банковских продуктах.</p>
+        <h3>Оплата за отзывы и исследования[span_43](start_span)[span_43](end_span)</h3>
+        <p>Вознаграждение за участие в исследованиях качества сервиса. Сбор обратной связи о банковских продуктах[span_44](start_span)[span_44](end_span).</p>
         <ul class="check-list">
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Оплата за честный отзыв</li>
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Участие в опросах банков</li>
-            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Просто участие без визитов</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Оплата за честный отзыв[span_45](start_span)[span_45](end_span)</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Участие в опросах банков[span_46](start_span)[span_46](end_span)</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Просто участие без визитов[span_47](start_span)[span_47](end_span)</li>
         </ul>
     </div>
 
     <!-- HOW IT WORKS -->
-    <h2 class="section-title">Как проходит консультация</h2>
+    <h2 class="section-title">Как проходит консультация[span_48](start_span)[span_48](end_span)</h2>
     <div class="card">
         <div class="step-item">
             <div class="step-num">01</div>
             <div class="step-content">
-                <h4>Пишете мне в Telegram</h4>
-                <p>Коротко описываете свою задачу.</p>
+                <h4>Пишете мне в Telegram[span_49](start_span)[span_49](end_span)</h4>
+                <p>Коротко описываете свою задачу[span_50](start_span)[span_50](end_span).</p>
             </div>
         </div>
         <div class="step-item">
             <div class="step-num">02</div>
             <div class="step-content">
-                <h4>Уточняющие вопросы</h4>
-                <p>Задаю вопросы и предлагаю подходящее решение.</p>
+                <h4>Уточняющие вопросы[span_51](start_span)[span_51](end_span)</h4>
+                <p>Задаю вопросы и предлагаю подходящее решение[span_52](start_span)[span_52](end_span).</p>
             </div>
         </div>
         <div class="step-item">
             <div class="step-num">03</div>
             <div class="step-content">
-                <h4>Онлайн, в любое время</h4>
-                <p>Консультация проходит удалённо и ни к чему не обязывает.</p>
+                <h4>Онлайн, в любое время[span_53](start_span)[span_53](end_span)</h4>
+                <p>Консультация проходит удалённо и ни к чему не обязывает[span_54](start_span)[span_54](end_span).</p>
             </div>
         </div>
     </div>
 
     <!-- PARTNERS -->
-    <h2 class="section-title">Партнёрство</h2>
-    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">Работаю напрямую с банками — без посредников и переплат.</p>
+    <h2 class="section-title">Партнёрство[span_55](start_span)[span_55](end_span)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">Работаю напрямую с банками — без посредников и переплат[span_56](start_span)[span_56](end_span).</p>
     <div class="partners-grid">
-        <div class="partner-pill">Альфа-Банк</div>
-        <div class="partner-pill">Т-Банк</div>
-        <div class="partner-pill">Сбербанк</div>
-        <div class="partner-pill">ВТБ</div>
-        <div class="partner-pill">Совкомбанк</div>
-        <div class="partner-pill">Газпромбанк</div>
-        <div class="partner-pill">Райффайзен Банк</div>
-        <div class="partner-pill">Открытие</div>
-        <div class="partner-pill">Росбанк</div>
+        <div class="partner-pill">Альфа-Банк[span_57](start_span)[span_57](end_span)</div>
+        <div class="partner-pill">Т-Банк[span_58](start_span)[span_58](end_span)</div>
+        <div class="partner-pill">Сбербанк[span_59](start_span)[span_59](end_span)</div>
+        <div class="partner-pill">ВТБ[span_60](start_span)[span_60](end_span)</div>
+        <div class="partner-pill">Совкомбанк[span_61](start_span)[span_61](end_span)</div>
+        <div class="partner-pill">Газпромбанк[span_62](start_span)[span_62](end_span)</div>
+        <div class="partner-pill">Райффайзен Банк[span_63](start_span)[span_63](end_span)</div>
+        <div class="partner-pill">Открытие[span_64](start_span)[span_64](end_span)</div>
+        <div class="partner-pill">Росбанк[span_65](start_span)[span_65](end_span)</div>
     </div>
 
     <!-- REVIEWS -->
-    <h2 class="section-title">Отзывы</h2>
+    <h2 class="section-title">Отзывы[span_66](start_span)[span_66](end_span)</h2>
     <div class="card review-card">
         <h4>Алина <span class="stars">★★★★★</span></h4>
-        <p>Спасибочки @mngdianaa 🙌 выплату за отзывы по Альфе и за оформление получила, в ближайшие дни ещё отзывы напишу.</p>
+        <p>Спасибочки @mngdianaa 🙌 выплату за отзывы по Альфе и за оформление получила, в ближайшие дни ещё отзывы напишу[span_67](start_span)[span_67](end_span).</p>
     </div>
     <div class="card review-card">
         <h4>Маша <span class="stars">★★★★★</span></h4>
-        <p>Самая лучшая @mngdianaa ))) честно, понятно, быстро и главное — хорошо оплачиваемо.</p>
+        <p>Самая лучшая @mngdianaa ))) честно, понятно, быстро и главное — хорошо оплачиваемо[span_68](start_span)[span_68](end_span).</p>
     </div>
     <div class="card review-card">
         <h4>Настя <span class="stars">★★★★★</span></h4>
-        <p>Занималась написанием отзывов с Дианой и вот пишу отзыв о нашей работе — всё круто, классно) Кто сомневается, понимаю вас хахах, сама засомневалась сначала, но всё хорошо 🫶</p>
+        <p>Занималась написанием отзывов с Дианой и вот пишу отзыв о нашей работе — всё круто, классно) Кто сомневается, понимаю вас хахах, сама засомневалась сначала, но всё хорошо 🫶[span_69](start_span)[span_69](end_span)</p>
     </div>
 
     <!-- CONTACT -->
     <div class="card contact-box">
-        <div class="icon-wrap"><svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg></div>
-        <h2>Остались вопросы?</h2>
-        <p>Напишите — отвечу лично и подберу решение под вашу ситуацию.</p>
-        <a href="https://t.me/mngdianaa" class="btn-main">Написать в Telegram</a>
+        <div class="icon-wrap"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg></div>
+        <h2>Остались вопросы?[span_70](start_span)[span_70](end_span)</h2>
+        <p>Напишите — отвечу лично и подберу решение под вашу ситуацию[span_71](start_span)[span_71](end_span).</p>
+        <a href="https://t.me/mngdianaa" class="btn-main">Написать в Telegram[span_72](start_span)[span_72](end_span)</a>
     </div>
 
     <footer>
-        <p>© 2026 Диана Миронова · Консультант по банковским продуктам</p>
+        <p>© 2026 Диана · Консультант по банковским продуктам[span_73](start_span)[span_73](end_span)</p>
     </footer>
 
 </div>
